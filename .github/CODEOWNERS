@@ -1,0 +1,7 @@
+# Code owners for kestrel-standards (Flightpath §5). Last matching pattern wins.
+*                  @kestrel-technologies/office-of-the-cto
+/standards/KSS*    @kestrel-technologies/entsec-governance
+/standards/KES*    @kestrel-technologies/office-of-the-cto
+/process/          @kestrel-technologies/office-of-the-cto
+/catalog/          @kestrel-technologies/corpeng-crm
+/incidents/        @kestrel-technologies/corpeng-crm
