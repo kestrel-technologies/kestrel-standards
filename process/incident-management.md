@@ -31,3 +31,17 @@ Severity can change as facts arrive. Record each change and its reason on the ti
 5. **Analyse.** Every SEV-1 and SEV-2 needs a root-cause analysis (RCA), filed in Perch with the label `rca`. Until it is filed the ticket status reads "Contained; RCA pending".
 6. **Close** when the RCA is accepted and every open action has an owner and a due date.
 
+## 5. What a root-cause analysis contains
+
+- What happened, with a timeline in Pacific Time.
+- The root cause or causes, and the contributing factors. "Human error" is never a root cause on its own: say which control should have caught it and why it did not.
+- The controls involved, by KSS or KES identifier, and whether each was in place.
+- Corrective and preventive actions, each with an owner and a due date, tracked as Perch tickets.
+
+Where the cause depends on a platform's control posture, the business owner may commission an assessment against KSS first; the RCA cites its results.
+
+## 6. Related
+
+- [Flightpath](flightpath.md) §8 (rollback) and §9 (emergency and direct production changes).
+- [Exceptions](exceptions.md): an incident does not create an exception.
+- [Recent incidents](../incidents/README.md).
