@@ -19,3 +19,11 @@ An exception is a written, time-limited permission not to meet part of a standar
 4. **Expiry date**, and the plan that removes the need for the exception by then.
 5. **Owner** accountable for the plan.
 
+## 3. Rules
+
+1. **Chat approvals are not exceptions.** Neither are verbal approvals, emails, meeting notes or a manager's agreement. If there is no approved ticket, there is no exception.
+2. An exception covers only the scope written on the ticket. It does not extend to other instances, controls or teams.
+3. An exception ends on its expiry date. From that day the control applies in full. Renewal is a new request, filed before expiry and approved like the first.
+4. An architecture-review finding (`KSS-REV`) that a business owner accepts as risk is not an exception and does not stop the remediation clock.
+5. An incident does not create an exception. Acquired entities are in scope from the date the acquisition closes (KSS §0, KES §0) unless an approved exception says otherwise.
+
