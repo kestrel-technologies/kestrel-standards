@@ -1,6 +1,6 @@
-# Kestrel Security Standards (KSS) v3.1 — SaaS Platform Controls
+# Kestrel Security Standards (KSS) v3.2 — SaaS Platform Controls
 
-**Document:** KSS-SaaS-3.1 · **Owner:** Enterprise Security, Governance (Hannah Kowalczyk) · **Effective:** April 1, 2021 · **Classification:** Kestrel Internal
+**Document:** KSS-SaaS-3.2 · **Owner:** Enterprise Security, Governance (Hannah Kowalczyk) · **Effective:** November 15, 2021 · **Classification:** Kestrel Internal
 
 ## Scope
 
@@ -11,7 +11,7 @@ data, contracts, pricing, employee personal data). Acquired entities are in scop
 
 | Control | Requirement (summary) |
 |---|---|
-| KSS-IAM-01 | Users sign in through the Kestrel identity provider; local passwords disabled except break-glass. |
+| KSS-IAM-01 | Users sign in through the Kestrel identity provider; local passwords disabled except named break-glass accounts. |
 | KSS-IAM-02 | Administrator access limited to named individuals and reviewed quarterly. |
 | KSS-IAM-03 | Integration accounts are dedicated, least-privileged and rotated at least annually. |
 | KSS-SEC-04 | No credentials in code or configuration; secrets live in Strongbox. |
