@@ -111,6 +111,20 @@
 | Vantage onboarding status | **Available; Vantage integrations not migrated.** Vantage has a team vault (created 2022-03). As of the last review, the Birdseye integration credential is managed by Sales Ops outside Strongbox; the Pulsar callout uses a Salesforce Named Credential. |
 | Kestrel controls status (self-reported, EntSec Identity Platforms, 2026-01) | SSO: Enforced · Monitoring: Onboarded · Release: Flightpath, enforced · Secrets: n/a |
 
+## 2. Kestrel Vantage applications
+
+### Vantage Sales & Service — Salesforce
+
+| Field | Value |
+|---|---|
+| Purpose | CRM for Vantage: leads, accounts, contacts, opportunities, quotes ("Vantage Quoting"), contracts, provisioning requests, support cases. Inherited from Skyward Data. |
+| Owner team / contact | Vantage Business Systems · Dana Whitfield (Director) · product owner Mikael Lindqvist · administrator Ravi Venkataraman (Hyderabad) · platform accountability: CorpEng CRM Platform (Jon Licht) |
+| URL pattern | Production `https://kestrelvantage-prod.my.salesforce.com` · UAT `https://kestrelvantage-uat.my.salesforce.com` · Development `https://kestrelvantage-dev.my.salesforce.com` |
+| Data sensitivity | **Kestrel Restricted** (customer contacts, contracts, pricing, support case content) |
+| Vantage onboarding status | **In progress since 2022.** Metadata in Roost (`vantage-salesforce`); Flightpath Gates 1–2 enforced, Gate 3 advisory until Q1 2027; Flock connector configured 2023-02; Watchtower onboarding pending (`WT-3317`). Skyward-era exception `ENTSEC-EXC-0890` expired 2023-03-15. |
+| Kestrel controls status (self-reported, R. Venkataraman, 2023-11-14; re-attested unchanged 2026-01) | SSO: **Enabled** (Kestrel SAML configured) · Privileged access: "Admins limited" · Integrations: "Birdseye (integration user), Pulsar (connected app)" · Network: "Admin logins restricted to office ranges" · Monitoring: Pending (`WT-3317`) · Release: Flightpath (Gate 3 advisory) · Secrets: "Named Credentials in use" |
+| EntSec assessment | None on file. INC-0471 action A1: independent assessment in progress (Castellan Partners, due 2026-11-09). |
+
 ## 4. Requesting a change to this catalog
 
 Open a Perch ticket in the `CATALOG` queue with the application name, the field to change, and evidence. Owner and contact changes require the business unit's systems director to confirm. Control-status fields are re-attested by the owner annually; an EntSec assessment replaces the self-reported value.
