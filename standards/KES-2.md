@@ -1,6 +1,6 @@
 # Kestrel Engineering Standards (KES) v2 — Secure Development and Release
 
-**Document:** KES-2.0 · **Owner:** Office of the CTO, Engineering Standards (Daniel Reyes) · **Effective:** February 10, 2020 · **Classification:** Kestrel Internal
+**Document:** KES-2.4 · **Owner:** Office of the CTO, Engineering Standards (Daniel Reyes) · **Effective:** October 3, 2022 · **Classification:** Kestrel Internal
 
 ## Scope
 
@@ -11,7 +11,7 @@ All first-party code and Salesforce metadata deployed to a Kestrel production en
 | Clause | Requirement (summary) |
 |---|---|
 | KES-SEC-1 | No secrets in code or configuration. |
-| KES-SEC-2 | No injection: bind variables, parameterized queries. |
+| KES-SEC-2 | No injection: bind variables, parameterized queries. OAuth clients use the authorization-code flow with `state`; no tokens in URLs. |
 | KES-SEC-3 | Apex classes declare their sharing mode; exposed methods enforce object and field permissions. |
 | KES-SEC-4 | No unsafe DOM handling in web components. |
 | KES-SEC-5 | No personal data or secrets in logs. |
