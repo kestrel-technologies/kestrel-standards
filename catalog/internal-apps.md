@@ -125,6 +125,18 @@
 | Kestrel controls status (self-reported, R. Venkataraman, 2023-11-14; re-attested unchanged 2026-01) | SSO: **Enabled** (Kestrel SAML configured) · Privileged access: "Admins limited" · Integrations: "Birdseye (integration user), Pulsar (connected app)" · Network: "Admin logins restricted to office ranges" · Monitoring: Pending (`WT-3317`) · Release: Flightpath (Gate 3 advisory) · Secrets: "Named Credentials in use" |
 | EntSec assessment | None on file. INC-0471 action A1: independent assessment in progress (Castellan Partners, due 2026-11-09). |
 
+### Vantage Support Portal — Experience Cloud site
+
+| Field | Value |
+|---|---|
+| Purpose | Customer-facing portal on the production Salesforce org: case submission and tracking for authenticated customers; public help content and community threads |
+| Owner team / contact | Vantage Customer Success & Support · Owen Gallagher (VP) · administrator Ravi Venkataraman |
+| URL pattern | `https://kestrelvantage-prod.my.site.com/support` |
+| Data sensitivity | **Kestrel Restricted** (customer identities and case content behind login); public pages: Public |
+| Vantage onboarding status | In use since 2019 (Skyward); runs inside the production org, so inherits its onboarding status |
+| Kestrel controls status (self-reported, R. Venkataraman, 2024-03-06) | Customer login: portal accounts (local credentials; customers are not Kestrel users) · Public (guest) access: "knowledge content only" · Monitoring: as for the production org (pending) |
+| Related | INC-0471 (a public thread on this portal carried the exposed Birdseye link) |
+
 ## 4. Requesting a change to this catalog
 
 Open a Perch ticket in the `CATALOG` queue with the application name, the field to change, and evidence. Owner and contact changes require the business unit's systems director to confirm. Control-status fields are re-attested by the owner annually; an EntSec assessment replaces the self-reported value.
