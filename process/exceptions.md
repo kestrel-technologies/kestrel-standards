@@ -27,3 +27,6 @@ An exception is a written, time-limited permission not to meet part of a standar
 4. An architecture-review finding (`KSS-REV`) that a business owner accepts as risk is not an exception and does not stop the remediation clock.
 5. An incident does not create an exception. Acquired entities are in scope from the date the acquisition closes (KSS §0, KES §0) unless an approved exception says otherwise.
 
+## 4. Where to look
+
+Search Perch for the `exception` label, or for the queue prefix (`ENTSEC-EXC`, `KES-EXC`). The ticket's status shows whether it is approved, expired or closed.
