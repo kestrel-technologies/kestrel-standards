@@ -1,6 +1,6 @@
-# Kestrel Security Standards (KSS) v4.0 — SaaS Platform Controls
+# Kestrel Security Standards (KSS) v4.1 — SaaS Platform Controls
 
-**Document:** KSS-SaaS-4.0 · **Owner:** Enterprise Security, Governance (Hannah Kowalczyk) · **Effective:** March 7, 2022 · **Supersedes:** KSS-SaaS-3.2 (2021) · **Review cycle:** annual · **Classification:** Kestrel Internal
+**Document:** KSS-SaaS-4.1 · **Owner:** Enterprise Security, Governance (Hannah Kowalczyk) · **Effective:** March 4, 2024 · **Supersedes:** KSS-SaaS-4.0 (2022) · **Review cycle:** annual · **Classification:** Kestrel Internal
 
 ## 0. Purpose and scope
 
