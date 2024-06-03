@@ -137,6 +137,18 @@
 | Kestrel controls status (self-reported, R. Venkataraman, 2024-03-06) | Customer login: portal accounts (local credentials; customers are not Kestrel users) · Public (guest) access: "knowledge content only" · Monitoring: as for the production org (pending) |
 | Related | INC-0471 (a public thread on this portal carried the exposed Birdseye link) |
 
+### Birdseye — legacy customer-360 web application
+
+| Field | Value |
+|---|---|
+| Purpose | Skyward-era (2017) internal web application giving Sales Ops and Support L2 a single customer view (account, contacts, open opportunities, open cases) read from the production Salesforce org through an integration user |
+| Owner team / contact | **Skyward Sales Ops (legacy)** · contact: none on file (Sales Operations Manager role vacant since 2025-06) |
+| URL pattern | `https://birdseye.vantage.kestrel.example` (internal networks only since 2026-10-09; external networks see a maintenance page) |
+| Data sensitivity | **Kestrel Restricted** (customer contact and case data) |
+| Vantage onboarding status | **Deprecated** 2024-06 (architecture review `KSS-REV-0419`, decommission target Q3 2024). **Still in use** by Sales Ops and Support L2. Decision on remediate-vs-decommission: INC-0471 action A2 (M. Lindqvist, due 2026-11-30). Repository mirrored to Roost (`birdseye`), no code owner. |
+| Kestrel controls status (self-reported, C. Marsh, 2023-11-02; not re-attested) | SSO: "Enabled (users sign in with their Salesforce account)" · Monitoring: "Application logs retained locally" · Release: not on Flightpath · Secrets: "Managed by Sales Ops" · Network: "Internal only" |
+| EntSec assessment | `KSS-REV-0419` (2024-05-20): findings accepted as risk by the business owner. INC-0471 (2026-09-28): contributing factors recorded. |
+
 ## 4. Requesting a change to this catalog
 
 Open a Perch ticket in the `CATALOG` queue with the application name, the field to change, and evidence. Owner and contact changes require the business unit's systems director to confirm. Control-status fields are re-attested by the owner annually; an EntSec assessment replaces the self-reported value.
