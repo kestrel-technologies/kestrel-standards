@@ -8,7 +8,7 @@ This standard defines the minimum security controls for any Software-as-a-Servic
 
 Controls are stated as requirements (MUST / MUST NOT / SHOULD). "Platform instance" means one tenant, org, workspace or account of a SaaS product (e.g., one Salesforce org). Production and non-production instances holding Restricted data are in scope; non-production instances holding only synthetic data are out of scope for KSS-MON-07 and KSS-NET-05.
 
-Exceptions require a Perch ticket in the `ENTSEC-EXC` queue with compensating controls and an expiry date, approved by the Director, EntSec Governance. Verbal or chat approvals are not exceptions.
+Exceptions require a Perch ticket in the `ENTSEC-EXC` queue with compensating controls and an expiry date, approved by the Director, EntSec Governance. Verbal or chat approvals are not exceptions, and neither are meeting notes.
 
 ## 1. Controls
 
