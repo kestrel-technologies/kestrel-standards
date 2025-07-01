@@ -1,6 +1,6 @@
-# Flightpath — Release Process for Production Changes (v2.0)
+# Flightpath — Release Process for Production Changes (v2.2)
 
-**Document:** FP-2.0 · **Owner:** Office of the CTO, Engineering Standards (Daniel Reyes) · **Tooling owner:** CorpEng, Release Engineering · **Effective:** September 5, 2022 · **Classification:** Kestrel Internal
+**Document:** FP-2.2 · **Owner:** Office of the CTO, Engineering Standards (Daniel Reyes) · **Tooling owner:** CorpEng, Release Engineering · **Effective:** July 1, 2025 · **Classification:** Kestrel Internal
 
 ## 0. Scope
 
@@ -104,6 +104,14 @@ CorpEng Release Engineering MAY pause automatic deploys for a repository under a
 | `birdseye` | all | **No code owner on file** (legacy; see Internal Applications Catalog) | — |
 | `kestrel-standards` | `standards/KSS*` | EntSec Governance | Hannah Kowalczyk |
 | `kestrel-standards` | `standards/KES*`, `process/**` | Office of the CTO, Engineering Standards | Daniel Reyes |
+
+## 6. The Flightpath Reviewer
+
+1. The Reviewer runs as a Roost check named `flightpath/reviewer` on every CL revision. It posts one comment titled **Flightpath Reviewer** containing the verdict table defined in KES §5, and sets the check to success (no Block), neutral (Warn only) or failure (Block).
+2. The Reviewer evaluates the CL against the KES revision current on the CL's creation date.
+3. Respond to a finding by changing the code, or by a code-owner override comment `flightpath: override <clause> — <reason>`. Overrides are reported weekly.
+4. The Reviewer does not read tickets, chat or documentation. Evidence that lives outside the repository does not change its verdict.
+5. Where a gate is advisory (§10), the check still runs and still posts; a failure does not disable the merge button.
 
 ## 8. Rollback
 
