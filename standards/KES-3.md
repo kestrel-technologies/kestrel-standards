@@ -190,6 +190,23 @@ Rules of use:
 3. Architecture reviews that identify KES findings are recorded as `KSS-REV` tickets; a review finding accepted by a business owner is not an exception and does not stop the clock on remediation.
 4. Chat or verbal approvals are not exceptions.
 
+## 7. Platform notes (informative)
+
+Non-exhaustive mapping from clauses to the mechanisms that satisfy them on each platform. The clauses in §2–§4 are the requirement; this table is a starting point.
+
+| Clause | Salesforce (Apex, LWC, Flow) | Python / Go / TypeScript services |
+|---|---|---|
+| KES-SEC-1 | Named Credential + External Credential; `callout:<name>` endpoints; no literals in Apex, custom settings, custom metadata, labels | Strongbox-injected environment variables or mounted files; `.env.example` placeholders; secret scanning in CI |
+| KES-SEC-2 | Bind variables in SOQL/SOSL; `Database.queryWithBinds` with a validated map; allowlisted field names | Parameterized queries / prepared statements; `subprocess` with argument lists, never shell strings; OAuth libraries with PKCE and `state` |
+| KES-SEC-3 | `with sharing`; `WITH USER_MODE` / `WITH SECURITY_ENFORCED`; `Security.stripInaccessible`; `AccessLevel.USER_MODE` DML; Flow run mode Default | Authorization checks at the service boundary; row-level filters from the identity, never from the request |
+| KES-SEC-4 | Template binding; `lightning-formatted-rich-text`; no `lwc:dom="manual"` with data | Framework templating; no `innerHTML` / `dangerouslySetInnerHTML`; CSP headers |
+| KES-SEC-5 | `System.debug` of Ids, counts, status codes only; no `JSON.serialize(records)` | Structured logging with a redaction filter; `INFO` in production |
+| KES-DEV-1 | CL per change incl. profiles, permission sets, Flows; no Setup edits in production | CL per change; branch protection |
+| KES-DEV-2 / DEV-4 | Asserting tests, `System.runAs`, `HttpCalloutMock`, no `SeeAllData`, 85% per class | Unit tests with assertions; coverage report in CI |
+| KES-DEV-3 | SFDX source in Roost; weekly drift job | Terraform or scripted `gcloud` in Roost; drift detection |
+| KES-DEV-5 / DEP-1 | Managed package versions recorded; API version within three releases | Lockfiles; pinned versions; vulnerability scan; EOL table |
+| KES-DEV-6 | Flow Description; `docs/flows.md`; Flow tests | n/a |
+
 ## 8. Pre-CL checklist (informative)
 
 Authors SHOULD confirm each line before requesting review. Reviewers MAY ask for the completed list.
