@@ -1,0 +1,29 @@
+# charter.yaml: Charter navigation. The Charter generator reads this file.
+# Sections and documents appear in the left navigation in this order. `id` is the Charter URL slug
+# (and the doc id the gateway's charter_get uses); `path` is the source file in this repository.
+title: Charter
+subtitle: Kestrel standards portal
+banner: "Charter: the standards we hold ourselves to."
+sections:
+  - name: Standards
+    docs:
+      - id: kss-saas-4.2
+        path: standards/KSS-SaaS-4.2.md
+        nav: "KSS-SaaS-4.2 · SaaS Platform Controls"
+      - id: kes
+        path: standards/KES-3.md
+        nav: "KES-3 · Secure Development and Release"
+      - id: kss-saas-4.1
+        path: standards/KSS-SaaS-4.1.md
+        nav: "KSS-SaaS-4.1 (superseded)"
+  - name: Process
+    docs:
+      - id: flightpath
+        path: process/flightpath.md
+        nav: "Flightpath · Release Process"
+      - id: incident-management
+        path: process/incident-management.md
+        nav: "Incident Management"
+      - id: exceptions
+        path: process/exceptions.md
+        nav: "Exceptions"
