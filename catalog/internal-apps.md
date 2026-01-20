@@ -149,6 +149,18 @@
 | Kestrel controls status (self-reported, C. Marsh, 2023-11-02; not re-attested) | SSO: "Enabled (users sign in with their Salesforce account)" · Monitoring: "Application logs retained locally" · Release: not on Flightpath · Secrets: "Managed by Sales Ops" · Network: "Internal only" |
 | EntSec assessment | `KSS-REV-0419` (2024-05-20): findings accepted as risk by the business owner. INC-0471 (2026-09-28): contributing factors recorded. |
 
+### Pulsar — marketing automation (third-party)
+
+| Field | Value |
+|---|---|
+| Purpose | Marketing automation and lead nurture; pushes web-form and nurture leads into Salesforce (`Lead.LeadSource` = Web, Pulsar Nurture) through the "Pulsar Sync" connected app (authorized by Sales Ops, 2022); Salesforce calls back to Pulsar through Named Credential `Pulsar_API` |
+| Owner team / contact | Vantage Sales Operations (Austin) · contact: Sales Operations Manager (vacant since 2025-06); interim Mikael Lindqvist |
+| URL pattern | `https://app.pulsar.example/kestrelvantage` (vendor-hosted) |
+| Data sensitivity | **Kestrel Restricted** (prospect and customer contact data) |
+| Vantage onboarding status | Skyward-era contract (2019), renewed 2025. Not connected to Flock or Watchtower. |
+| Kestrel controls status (self-reported, Vantage Sales Operations, 2025-07) | SSO: "Vendor SSO configured for marketing users" · Monitoring: "Vendor audit log available in the admin console" · Integration: "Pulsar Sync connected app, admin pre-authorized" · Secrets: "Salesforce Named Credential `Pulsar_API`" |
+| EntSec assessment | None on file. Included in the Skyward-era SaaS assessment (§3). |
+
 ## 4. Requesting a change to this catalog
 
 Open a Perch ticket in the `CATALOG` queue with the application name, the field to change, and evidence. Owner and contact changes require the business unit's systems director to confirm. Control-status fields are re-attested by the owner annually; an EntSec assessment replaces the self-reported value.
