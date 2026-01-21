@@ -27,3 +27,8 @@ sections:
       - id: exceptions
         path: process/exceptions.md
         nav: "Exceptions"
+  - name: Catalog
+    docs:
+      - id: apps-catalog
+        path: catalog/internal-apps.md
+        nav: "Internal Applications Catalog"
