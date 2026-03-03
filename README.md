@@ -9,6 +9,7 @@ Every page here is published to Charter, Kestrel's standards portal, by the Char
 | Kestrel Security Standards, SaaS Platform Controls (KSS-SaaS-4.2) | [`standards/KSS-SaaS-4.2.md`](standards/KSS-SaaS-4.2.md) | EntSec Governance |
 | KSS-SaaS-4.1 (superseded) | [`standards/KSS-SaaS-4.1.md`](standards/KSS-SaaS-4.1.md) | EntSec Governance |
 | Kestrel Engineering Standards (KES-3.0) | [`standards/KES-3.md`](standards/KES-3.md) | Office of the CTO |
+| Flightpath: Release Process (FP-2.3) | [`process/flightpath.md`](process/flightpath.md) | Office of the CTO |
 | Incident Management | [`process/incident-management.md`](process/incident-management.md) | EntSec |
 | Exceptions to Kestrel Standards | [`process/exceptions.md`](process/exceptions.md) | EntSec Governance, Office of the CTO |
 | Internal Applications Catalog | [`catalog/internal-apps.md`](catalog/internal-apps.md) | CorpEng Business Systems |

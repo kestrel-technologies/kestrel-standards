@@ -1,6 +1,6 @@
-# Flightpath — Release Process for Production Changes (v2.2)
+# Flightpath — Release Process for Production Changes (v2.3)
 
-**Document:** FP-2.2 · **Owner:** Office of the CTO, Engineering Standards (Daniel Reyes) · **Tooling owner:** CorpEng, Release Engineering · **Effective:** July 1, 2025 · **Classification:** Kestrel Internal
+**Document:** FP-2.3 · **Owner:** Office of the CTO, Engineering Standards (Daniel Reyes) · **Tooling owner:** CorpEng, Release Engineering · **Effective:** March 3, 2026 · **Classification:** Kestrel Internal
 
 ## 0. Scope
 
@@ -112,6 +112,26 @@ CorpEng Release Engineering MAY pause automatic deploys for a repository under a
 3. Respond to a finding by changing the code, or by a code-owner override comment `flightpath: override <clause> — <reason>`. Overrides are reported weekly.
 4. The Reviewer does not read tickets, chat or documentation. Evidence that lives outside the repository does not change its verdict.
 5. Where a gate is advisory (§10), the check still runs and still posts; a failure does not disable the merge button.
+
+## 7. Status vocabulary for tracking a change
+
+When reporting the status of a ticket or remediation item, use exactly one of these four values. Each value is defined by **evidence in Roost, Flightpath and the target environment**, not by the opinion of the owning team.
+
+| Status | Evidence required | Not sufficient |
+|---|---|---|
+| **Not started** | No CL for the item meets the In Dev test below. This includes: no CL exists; the CL is a draft; the CL's CI is failing (for example, blocked on a license, a dependency or a failing build); or the CL's linked Perch ticket is in state **Blocked**. | A ticket being assigned, "on the roadmap," or "config is written" in a branch nobody can deploy. |
+| **In Dev** | A CL implementing the item is merged to `develop`, **or** is open against `develop` and meets all three of: marked ready for review (not a draft), CI passing on its latest revision, and its linked Perch ticket not in state Blocked. The change is deployed to the dev environment or deployable to it. Nothing is on `uat`. | "Merged" without saying where; a draft CL; an open CL with red checks; a CL whose ticket is Blocked. |
+| **In UAT** | The change is merged to `uat` and deployed to the UAT environment (deploy job green). Not yet on `main`. | A change that is partially in production: report at the last stage that is fully complete, with a note. |
+| **Done** | **All three:** merged to `main` **and** deployed to the production environment (Flightpath deploy job green) **and** post-deploy verification recorded on the CHG ticket. | Merged to `main` but the deploy failed; deployed but not verified; verified in UAT only. |
+
+In short: an open CL counts as In Dev only if it is ready for review with passing CI and its linked ticket is not Blocked.
+
+Rules:
+
+1. Status is the **furthest stage fully reached**. A remediation item whose scope covers eight profiles and is applied to three in production is not Done; it is reported at the last stage where all eight were complete, with the partial production state noted.
+2. "Merged" is not a status. State the branch.
+3. A change made directly in a production environment without a CL (see §9) may be *in effect* but is not **Done** under Flightpath until it has been back-ported as a CL and verified. For reporting during an incident or an audit, state both facts: "in effect in prod (direct change, CHG-####); CL pending."
+4. When the item is tracked in a repository that is not yet under Flightpath, the same four values apply using the repository's branches as evidence.
 
 ## 8. Rollback
 
