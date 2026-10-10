@@ -32,3 +32,11 @@ sections:
       - id: apps-catalog
         path: catalog/internal-apps.md
         nav: "Internal Applications Catalog"
+  - name: Incidents
+    docs:
+      - id: recent-incidents
+        path: incidents/README.md
+        nav: "Recent incidents"
+      - id: incidents/inc-0471
+        path: incidents/INC-0471.md
+        nav: "INC-0471 · Birdseye shared link"

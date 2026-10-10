@@ -13,6 +13,8 @@ Every page here is published to Charter, Kestrel's standards portal, by the Char
 | Incident Management | [`process/incident-management.md`](process/incident-management.md) | EntSec |
 | Exceptions to Kestrel Standards | [`process/exceptions.md`](process/exceptions.md) | EntSec Governance, Office of the CTO |
 | Internal Applications Catalog | [`catalog/internal-apps.md`](catalog/internal-apps.md) | CorpEng Business Systems |
+| Recent incidents | [`incidents/README.md`](incidents/README.md) | CorpEng Business Systems |
+| INC-0471 summary | [`incidents/INC-0471.md`](incidents/INC-0471.md) | CorpEng Business Systems |
 
 ---
 
