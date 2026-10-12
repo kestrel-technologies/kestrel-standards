@@ -161,6 +161,23 @@
 | Kestrel controls status (self-reported, Vantage Sales Operations, 2025-07) | SSO: "Vendor SSO configured for marketing users" · Monitoring: "Vendor audit log available in the admin console" · Integration: "Pulsar Sync connected app, admin pre-authorized" · Secrets: "Salesforce Named Credential `Pulsar_API`" |
 | EntSec assessment | None on file. Included in the Skyward-era SaaS assessment (§3). |
 
+## 3. Skyward-era SaaS applications (third-party)
+
+Vantage inherited the following SaaS subscriptions from Skyward Data. Each is in use by Vantage staff, contracted and administered by Vantage, and **not** connected to Flock or Watchtower. None has been assessed against KSS. Control status for every entry: **Skyward-era SaaS, control status: Not assessed.** An assessment of three KSS capabilities (SSO enforcement, network restriction, audit-log export to central monitoring) from vendor documentation is INC-0471 follow-up work requested by M. Oyelaran.
+
+| Application | Vendor category | Used by | Vantage administrator | Data sensitivity | Control status |
+|---|---|---|---|---|---|
+| Slack | Team messaging (legacy; Chirp is the Kestrel standard) | Austin engineering and support channels still active | Vantage IT (Austin) | Kestrel Internal | Skyward-era SaaS, control status: Not assessed |
+| Zoom | Video meetings | Sales, support, customer calls | Vantage IT (Austin) | Kestrel Internal (recordings may contain Restricted) | Skyward-era SaaS, control status: Not assessed |
+| Atlassian Jira Cloud | Engineering work tracking (legacy; Perch is the Kestrel standard) | Vantage Engineering (Warsaw, Austin) | Vantage Engineering | Kestrel Internal | Skyward-era SaaS, control status: Not assessed |
+| DocuSign | E-signature for order forms and SOWs | Sales, Legal | Vantage Sales Operations | Kestrel Restricted (contracts, pricing) | Skyward-era SaaS, control status: Not assessed |
+| Box | File sharing with customers and partners | Expert Services, Sales | Vantage IT (Austin) | Kestrel Restricted | Skyward-era SaaS, control status: Not assessed |
+| GitHub Enterprise Cloud | Source hosting for Vantage product code (separate from Roost) | Vantage Engineering | Vantage Engineering | Kestrel Internal (source) | Skyward-era SaaS, control status: Not assessed |
+| Zendesk | Customer support (legacy; migrated to Salesforce cases 2020, instance retained for history) | Support L2 (read-only history) | Vantage Customer Success & Support | Kestrel Restricted (historical case data) | Skyward-era SaaS, control status: Not assessed |
+| HubSpot | Marketing website forms and email (parallel to Pulsar for the Skyward brand site) | Vantage Marketing | Vantage Sales Operations | Kestrel Restricted (prospect data) | Skyward-era SaaS, control status: Not assessed |
+| Snowflake | Analytics warehouse for sales and usage reporting (Skyward-era; separate from the Vantage Data Cloud product) | Sales Operations, Finance | Vantage Sales Operations | Kestrel Restricted (customer usage and revenue data) | Skyward-era SaaS, control status: Not assessed |
+| Datadog | Infrastructure and application monitoring for Vantage product services (separate from Watchtower) | Vantage Engineering, Managed Operations | Vantage Engineering | Kestrel Internal (telemetry may contain customer identifiers) | Skyward-era SaaS, control status: Not assessed |
+
 ## 4. Requesting a change to this catalog
 
 Open a Perch ticket in the `CATALOG` queue with the application name, the field to change, and evidence. Owner and contact changes require the business unit's systems director to confirm. Control-status fields are re-attested by the owner annually; an EntSec assessment replaces the self-reported value.

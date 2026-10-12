@@ -1,0 +1,20 @@
+# Flightpath Gate 2 for kestrel-standards: every page is published to Charter, so check it before it merges.
+name: ci
+on:
+  pull_request: { branches: [main] }
+  push: { branches: [main] }
+permissions: { contents: read }
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: every page listed in charter.yaml exists
+        run: |
+          grep -oE 'path: [^ ]+' charter.yaml | cut -d' ' -f2 | while read -r p; do test -f "$p" || { echo "missing $p"; exit 1; }; done
+      - name: no draft or internal-only sections
+        run: |
+          if grep -rniE '^#+ .*(draft|internal only|do not publish)' --include='*.md' .; then exit 1; fi
+      - name: no trailing whitespace
+        run: |
+          if grep -rnE ' +$' --include='*.md' .; then echo "trailing whitespace"; exit 1; fi
